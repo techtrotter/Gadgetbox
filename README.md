@@ -1,3 +1,4 @@
+
 # GadgetBox
 
 GadgetBox is a full-stack e-commerce web application built using Django REST Framework and React.js. It includes user and admin functionalities, a REST API backend, cart and checkout workflows, and PayPal integration for payment.
@@ -32,16 +33,13 @@ Click below to view the live demo:
 ## Screenshots
 
 ### Product Listing Page
-![Product List](assets/screenshots/product-listing.png)
+![Product Listing](assets/screenshots/product-listing.png)
 
 ### Product Detail Page
 ![Product Detail](assets/screenshots/product-detail.png)
 
 ### Order Summary & Payment
 ![Order Summary](assets/screenshots/order-summary.png)
-
-### Footer and Pagination UI
-![Footer](assets/screenshots/footer-pagination.png)
 
 ---
 
@@ -64,10 +62,10 @@ Click below to view the live demo:
 GadgetBox/
 │
 ├── backend/
-│   ├── urls/           # Modular routing: products, orders, users
-│   ├── views/          # Business logic for APIs
-│   ├── models/         # Product, Order, User models
-│   ├── serializers/    # API serialization layer
+│   ├── urls/
+│   ├── views/
+│   ├── models/
+│   ├── serializers/
 │   └── db.sqlite3
 │
 ├── frontend/
@@ -81,7 +79,9 @@ GadgetBox/
 │   ├── demo/
 │   │   └── Screen_Recording_2024-09-26_152344_resized.mp4
 │   └── screenshots/
-│       └── *.png
+│       ├── product-listing.png
+│       ├── product-detail.png
+│       └── order-summary.png
 ```
 
 ---
@@ -121,13 +121,11 @@ npm start
 ## About the Author
 
 **Bijoy Laxmi Biswas**  
-Full-stack Python Developer with a passion for solving real-world problems using scalable web technologies.
+Full-stack Python Developer
 
 - GitHub: [@techtrotter](https://github.com/techtrotter)  
 - LinkedIn: [linkedin.com/in/bijoy-laxmi-biswas-cse07](https://linkedin.com/in/bijoy-laxmi-biswas-cse07)
 
 ---
 
-## License
 
-This project is licensed under the MIT License.
