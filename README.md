@@ -1,30 +1,60 @@
 # GadgetBox
 
-**A full-stack e-commerce web application focused on electronics.**  
-Developed using Django REST Framework for the backend and React.js + Redux for the frontend.
+GadgetBox is a full-stack e-commerce web application built using Django REST Framework and React.js. It includes user and admin functionalities, a REST API backend, cart and checkout workflows, and PayPal integration for payment.
 
 ---
 
-## Project Overview
+## Project Features
 
-GadgetBox is a responsive, scalable e-commerce solution featuring product listing, cart management, secure checkout, admin functionalities, and PayPal integration. It follows best practices in clean code architecture, RESTful API design, and frontend component reusability.
+### User Functionality
+- JWT-based registration/login/logout
+- Browse and search paginated product listings
+- View product details, add reviews and ratings
+- Add to cart, update quantities, remove items
+- Place orders with shipping details
+- View order history
+
+### Admin Functionality
+- Create/update/delete products
+- View all user orders
+- Mark orders as delivered and paid
 
 ---
 
-## Features
+## Demo Video
 
-### User:
-- User registration, login with JWT-based authentication
-- Product listing, pagination, rating, and reviews
-- Cart system and order placement
-- PayPal payment gateway integration
-- View order history and order details
+Click below to view the live demo:
 
-### Admin:
-- Product creation, editing, deletion
-- Order delivery management
-- Access control (admin-only routes)
-- Auto user profile creation using Django signals
+[![Watch Demo](assets/screenshots/product-list.png)](assets/demo/Screen_Recording_2024-09-26_152344_resized.mp4)
+
+---
+
+## Screenshots
+
+### Product Listing Page
+![Product List](assets/screenshots/product-listing.png)
+
+### Product Detail Page
+![Product Detail](assets/screenshots/product-detail.png)
+
+### Order Summary & Payment
+![Order Summary](assets/screenshots/order-summary.png)
+
+### Footer and Pagination UI
+![Footer](assets/screenshots/footer-pagination.png)
+
+---
+
+## Tech Stack
+
+| Layer       | Technology                     |
+|-------------|--------------------------------|
+| Frontend    | React.js, Redux, Bootstrap     |
+| Backend     | Django, Django REST Framework  |
+| Database    | SQLite3 (dev), PostgreSQL (prod) |
+| Auth        | JWT (SimpleJWT)                |
+| Payments    | PayPal Sandbox API             |
+| Deployment  | Netlify (frontend), Render/Heroku (backend) |
 
 ---
 
@@ -33,46 +63,43 @@ GadgetBox is a responsive, scalable e-commerce solution featuring product listin
 ```
 GadgetBox/
 │
-├── backend/                  # Django REST Framework API
-│   ├── urls/                 # Modularized URL routing
-│   ├── views/                # API views and logic
-│   ├── models/               # Database schema
-│   ├── serializers/          # DRF Serializers
-│   ├── signals.py            # Auto profile creation
-│   └── db.sqlite3            # Development database
+├── backend/
+│   ├── urls/           # Modular routing: products, orders, users
+│   ├── views/          # Business logic for APIs
+│   ├── models/         # Product, Order, User models
+│   ├── serializers/    # API serialization layer
+│   └── db.sqlite3
 │
-├── frontend/                 # React.js frontend
+├── frontend/
 │   ├── src/
 │   │   ├── components/
 │   │   ├── screens/
-│   │   ├── actions/
-│   │   └── reducers/
+│   │   └── redux/
 │   └── public/
 │
-├── myenv/                    # Python virtual environment
-├── README.md
-├── package.json
-├── requirements.txt
-├── yarn.lock
-└── manage.py
+├── assets/
+│   ├── demo/
+│   │   └── Screen_Recording_2024-09-26_152344_resized.mp4
+│   └── screenshots/
+│       └── *.png
 ```
 
 ---
 
-## Backend Setup (Django)
+## Getting Started
+
+### Backend Setup
 
 ```bash
 cd backend
 python -m venv venv
-source venv/bin/activate      # Windows: venv\Scripts\activate
+source venv/bin/activate     # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
 
----
-
-## Frontend Setup (React)
+### Frontend Setup
 
 ```bash
 cd frontend
@@ -82,77 +109,25 @@ npm start
 
 ---
 
-## Authentication
+## Deployment
 
-- Uses JWT tokens for login and access control
-- Protected routes for admin using custom middleware
-- Token refresh and expiration handled via SimpleJWT
-
----
-
-## Payments
-
-- Integrated with PayPal REST API
-- Payment status recorded and linked with order model
-- Custom hooks for payment success handling
-
----
-
-## Screenshots
-
-### Product Listing  
-![Product List](assets/screenshots/product-listing.png)
-
-### Product Detail  
-![Product Detail](assets/screenshots/product-detail.png)
-
-### Order Summary  
-![Order Page](assets/screenshots/order-summary.png)
-
----
-
-## Demo Video
-
-**Watch the walkthrough demo:**  
-[Click to View Demo](assets/demo/Screen_Recording_2024-09-26_152344_resized.mp4)
-
----
-
-## Deployment Instructions
-
-### Frontend
-- Can be deployed to Netlify, Vercel, or Firebase Hosting
-
-### Backend
-- Compatible with Heroku, Render, or Railway deployment
-- CORS, environment variables (`.env`), and production settings required
-
----
-
-## Technologies Used
-
-| Layer      | Stack                           |
-|------------|----------------------------------|
-| Frontend   | React.js, Redux, React Router    |
-| Backend    | Django, Django REST Framework    |
-| Auth       | JWT Authentication (SimpleJWT)   |
-| Payment    | PayPal API (Sandbox)             |
-| Database   | SQLite3 (development), PostgreSQL (prod) |
-| Styling    | Bootstrap, React Bootstrap       |
-| Deployment | Netlify, Heroku, Railway         |
+- Frontend: Netlify or Vercel
+- Backend: Render or Heroku
+- CORS headers configured in Django
+- Environment variables managed via `.env`
 
 ---
 
 ## About the Author
 
 **Bijoy Laxmi Biswas**  
-Full-stack Python developer passionate about clean architecture, scalable systems, and modern JavaScript.  
+Full-stack Python Developer with a passion for solving real-world problems using scalable web technologies.
+
 - GitHub: [@techtrotter](https://github.com/techtrotter)  
-- LinkedIn: [Bijoy Laxmi Biswas](https://www.linkedin.com/in/bijoy-laxmi-biswas-cse07/)  
-- Email: biswas.bijaylacxmi04@gmail.com
+- LinkedIn: [linkedin.com/in/bijoy-laxmi-biswas-cse07](https://linkedin.com/in/bijoy-laxmi-biswas-cse07)
 
 ---
 
 ## License
 
-This project is open for educational and demonstration purposes.
+This project is licensed under the MIT License.
