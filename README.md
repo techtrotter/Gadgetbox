@@ -26,22 +26,40 @@ GadgetBox is a full-stack e-commerce web application built using Django REST Fra
 
 Click below to view the live demo:
 
-[![Watch Demo](assets/screenshots/product-list.png)](assets/demo/Screen_Recording_2024-09-26_152344_resized.mp4)
+[![Watch Demo](./Screen%20Recording%202024-09-26%20152344_resized.mp4)](./Screen%20Recording%202024-09-26%20152344_resized.mp4)
+
+This video showcases:
+- End-to-end flow: from browsing products to placing an order
+- Real-time frontend-backend interaction
+- JWT-based login/logout
+- Admin and user-specific actions
+- Cart management and order summary
+
+## UI Screenshots
+
+###  Product Listing Page
+
+![Product Listing](./Screenshot%202025-06-26%20173408.png)
+
+> Displays a list of electronic gadgets such as laptops, phones, and accessories with prices, star ratings, and pagination controls.
 
 ---
 
-## Screenshots
+### Product Details Page
 
-### Product Listing Page
-![Product Listing](assets/screenshots/product-listing.png)
+![Product Details](./Screenshot%202025-06-26%20173418.png)
 
-### Product Detail Page
-![Product Detail](assets/screenshots/product-detail.png)
-
-### Order Summary & Payment
-![Order Summary](assets/screenshots/order-summary.png)
+> On clicking any product, users are redirected to a dynamic product detail page showing high-resolution images, full descriptions, price, availability, and an "Add to Cart" button.
 
 ---
+
+###  Footer & Contact Section
+
+![Footer](./Screenshot%202025-06-26%20174100.png)
+
+> The footer contains links to services, social media icons, an about section, and credits. It is responsive and consistent across all pages.
+
+
 
 ## Tech Stack
 
@@ -128,4 +146,6 @@ Full-stack Python Developer
 
 ---
 
+## License
 
+This project is licensed under the MIT License.
